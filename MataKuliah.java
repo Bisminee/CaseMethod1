@@ -15,8 +15,9 @@ class MataKuliah {
     }
 
     void tampilMataKuliah(){
-        System.out.println("Kode Mata Kuliah: " + kodeMK);
-        System.out.println("Nama Mata Kuliah: " + namaMK);
-        System.out.println("Jumlah SKS: " + sks);
+        System.out.print("Kode MK: " + kodeMK + " | " 
+                        + "Nama: " + namaMK + " | " 
+                        + "SKS: " + sks);
+        System.out.println();
     }
 }
