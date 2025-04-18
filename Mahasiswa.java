@@ -8,6 +8,9 @@ class Mahasiswa{
     }
 
     void tampilMahasiswa(){
-        
+            System.out.print("NIM: " + NIM + " | " 
+            + "Nama: " + nama + " | " 
+            + "Prodi: " + prodi);
+            System.out.println();
     }
 }
