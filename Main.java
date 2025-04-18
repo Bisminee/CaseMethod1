@@ -25,7 +25,8 @@ public class Main {
             new Penilaian(mhs[0], matkul[1], 60, 75, 70),
             new Penilaian(mhs[1], matkul[0], 75, 70, 80),
             new Penilaian(mhs[2], matkul[1], 85, 90, 95),
-            new Penilaian(mhs[2], matkul[2], 80, 90, 65),};
+            new Penilaian(mhs[2], matkul[2], 80, 90, 65)
+        };
 
         while (pilihan) {
             System.out.println("=== MENU SISTEM AKADEMIK ===");
@@ -54,11 +55,15 @@ public class Main {
                         dataMatkul.tampilMataKuliah();
                     }
                     System.out.println();
+                    break;
                 case 3:
+                    System.out.println("Data Penilaian: ");
                     fgs.tampilPenilaian(nilai);
                     break;
                 case 4:
-
+                    System.out.println("Urutan Data Penilaian(DSC): ");
+                    fgs.SortDSC(nilai);
+                    fgs.tampilPenilaian(nilai);
                     break;
                 case 5:
                     System.out.print("Masukkan NIM yang dicari: ");

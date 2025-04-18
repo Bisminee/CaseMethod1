@@ -16,11 +16,29 @@ public class Fungsi {
     }
 
     void tampilPenilaian(Penilaian nilai[]) {
-        System.out.println("Data Penilaian: ");
-        for (int i = 0; i < nilai.length; i++) {
-            System.out.print(nilai[i].mahasiswa.nama + " | " + nilai[i].mataKuliah.namaMK + " | ");
-            nilai[i].hitungNilaiAkhir();
-        }
+        for (Penilaian dataPenilaian : nilai) {
+            dataPenilaian.hitungNilaiAkhir();
+            System.out.println(dataPenilaian.mahasiswa.nama 
+                                + " | " + dataPenilaian.mataKuliah.namaMK 
+                                + " | " + "Nilai akhir: " + dataPenilaian.nilaiAkhir);
+}
         System.out.println();
+    }
+
+    void SortDSC(Penilaian nilai[]) {
+        for (Penilaian dataPenilaian : nilai) {
+            dataPenilaian.hitungNilaiAkhir();
+        }
+        for (int i = 0; i < nilai.length; i++) {
+            int max = i;
+            for (int j = i+1; j < nilai.length; j++) {
+                if (nilai[j].nilaiAkhir > nilai[max].nilaiAkhir ) {
+                    max = j;
+                }
+            }
+            Penilaian temp = nilai[i];
+            nilai[i] = nilai[max];
+            nilai[max] = temp;
+        }
     }
 }
