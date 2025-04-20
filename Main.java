@@ -71,7 +71,12 @@ public class Main {
                     fgs.cariMahasiswaNIM(cari, mhs);
                     System.out.println();
                     break;
+                case 0 :
+                    System.out.println("Terima kasih!");
+                    pilihan = false;
+                    break;
                 default:
+                    System.out.println("Tidak valid. Silahkan pilih menu yang tersedia");
                     break;
             }
 
