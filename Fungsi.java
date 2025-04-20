@@ -9,9 +9,10 @@ public class Fungsi {
                 posisi = i;
                 System.out.println("Mahasiswa Ditemukan: NIM: " + mhs[i].NIM + " | " 
                                     + mhs[i].nama + " | " + mhs[i].prodi);
-            }else if(posisi == -1){
-                System.out.println("Data tidak ditemukan");
             }
+        }
+        if(posisi == -1){
+            System.out.println("Data tidak ditemukan");
         }
     }
 
